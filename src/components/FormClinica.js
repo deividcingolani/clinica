@@ -237,7 +237,7 @@ export default function FormClinica() {
 
           <textarea {...register("Detalle de operacion", {})} />
         </div>
-        <input type="submit" className="button-send" />
+        <input type="submit" className="button-send" value="Imprimir Historia Medica"/>
       </form>
     </>
   );
