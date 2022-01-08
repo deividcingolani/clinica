@@ -60,9 +60,7 @@ export default function FormClinica() {
             placeholder="Cirujano"
             {...register("Cirujano", { required: true })}
           />
-        </div>
-        <div className="row">
-          <h1 className="label">Matricula Cirujano</h1>
+          <h1 className="label">Matricula </h1>
 
           <input
             type="number"
@@ -77,8 +75,6 @@ export default function FormClinica() {
             placeholder="Cirujano"
             {...register("Cirujano", { required: true })}
           />
-        </div>
-        <div className="row">
           <h1 className="label">Matricula </h1>
 
           <input
@@ -94,8 +90,6 @@ export default function FormClinica() {
             placeholder="Cirujano"
             {...register("Cirujano", { required: true })}
           />
-        </div>
-        <div className="row">
           <h1 className="label">Matricula </h1>
 
           <input
@@ -111,8 +105,6 @@ export default function FormClinica() {
             placeholder="Cirujano"
             {...register("Cirujano", { required: true })}
           />
-        </div>
-        <div className="row">
           <h1 className="label">Matricula</h1>
 
           <input
@@ -128,8 +120,6 @@ export default function FormClinica() {
             placeholder="Cirujano"
             {...register("Cirujano", { required: true })}
           />
-        </div>
-        <div className="row">
           <h1 className="label">Matricula</h1>
 
           <input
@@ -145,8 +135,6 @@ export default function FormClinica() {
             placeholder="Cirujano"
             {...register("Cirujano", { required: true })}
           />
-        </div>
-        <div className="row">
           <h1 className="label">Matricula</h1>
 
           <input
@@ -237,7 +225,11 @@ export default function FormClinica() {
 
           <textarea {...register("Detalle de operacion", {})} />
         </div>
-        <input type="submit" className="button-send" value="Imprimir Historia Medica"/>
+        <input
+          type="submit"
+          className="button-send"
+          value="Imprimir Historia"
+        />
       </form>
     </>
   );
