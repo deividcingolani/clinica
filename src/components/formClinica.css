@@ -1,13 +1,16 @@
-.row{
-    display: flex;
-    flex-direction: row;
-    margin-bottom: 20px;
+.row {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+  margin-left: 100px;
 }
 
-form{
-    display: flex;
-    flex-direction: column;
+form {
+  display: flex;
+  flex-direction: column;
 }
-.label{
-    font-size: 10px;
+.label {
+  font-size: 10px;
+  margin-right: 20px;
+  text-transform: uppercase;
 }
