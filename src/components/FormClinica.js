@@ -71,6 +71,91 @@ export default function FormClinica() {
           />
         </div>
         <div className="row">
+          <h1 className="label">Ayundante 1</h1>
+          <input
+            type="text"
+            placeholder="Cirujano"
+            {...register("Cirujano", { required: true })}
+          />
+        </div>
+        <div className="row">
+          <h1 className="label">Matricula </h1>
+
+          <input
+            type="number"
+            placeholder="Matricula Cirujano"
+            {...register("Matricula Cirujano", { required: true })}
+          />
+        </div>
+        <div className="row">
+          <h1 className="label">Ayundante 2</h1>
+          <input
+            type="text"
+            placeholder="Cirujano"
+            {...register("Cirujano", { required: true })}
+          />
+        </div>
+        <div className="row">
+          <h1 className="label">Matricula </h1>
+
+          <input
+            type="number"
+            placeholder="Matricula Cirujano"
+            {...register("Matricula Cirujano", { required: true })}
+          />
+        </div>
+        <div className="row">
+          <h1 className="label">Instrumentadora</h1>
+          <input
+            type="text"
+            placeholder="Cirujano"
+            {...register("Cirujano", { required: true })}
+          />
+        </div>
+        <div className="row">
+          <h1 className="label">Matricula</h1>
+
+          <input
+            type="number"
+            placeholder="Matricula Cirujano"
+            {...register("Matricula Cirujano", { required: true })}
+          />
+        </div>
+        <div className="row">
+          <h1 className="label">Instrumentadora</h1>
+          <input
+            type="text"
+            placeholder="Cirujano"
+            {...register("Cirujano", { required: true })}
+          />
+        </div>
+        <div className="row">
+          <h1 className="label">Matricula</h1>
+
+          <input
+            type="number"
+            placeholder="Matricula Cirujano"
+            {...register("Matricula Cirujano", { required: true })}
+          />
+        </div>
+        <div className="row">
+          <h1 className="label">Instrumentadora</h1>
+          <input
+            type="text"
+            placeholder="Cirujano"
+            {...register("Cirujano", { required: true })}
+          />
+        </div>
+        <div className="row">
+          <h1 className="label">Matricula</h1>
+
+          <input
+            type="number"
+            placeholder="Matricula Cirujano"
+            {...register("Matricula Cirujano", { required: true })}
+          />
+        </div>
+        <div className="row">
           <h1 className="label">Anestesia Empleada</h1>
 
           <input
