@@ -9,7 +9,7 @@ export default function FormClinica() {
     formState: { errors },
   } = useForm();
   const onSubmit = (data) => console.log(data);
-  console.log(errors);
+  console.log("Errores", errors);
 
   return (
     <>
@@ -127,7 +127,7 @@ export default function FormClinica() {
           <input
             type="text"
             placeholder="Anestesia Empleada"
-            {...register("Anestesia Empleada", {})}
+            {...register("anestesiaEmpleada", {})}
           />
         </div>
         <div className="row">
@@ -178,37 +178,57 @@ export default function FormClinica() {
         <div className="row">
           <h1 className="label">Cirugia</h1>
           <h1 className="label">Media</h1>
-          <input {...register("categoriaOperacion")} type="radio" value=" Media" />
+          <input
+            {...register("categoriaOperacion")}
+            type="radio"
+            value=" Media"
+          />
           <h1 className="label">Intermedia</h1>
 
-          <input {...register("categoriaOperacion")} type="radio" value=" Intermedia" />
+          <input
+            {...register("categoriaOperacion")}
+            type="radio"
+            value=" Intermedia"
+          />
 
           <h1 className="label">Mayor A</h1>
 
-          <input {...register("categoriaOperacion")} type="radio" value=" Mayor A" />
+          <input
+            {...register("categoriaOperacion")}
+            type="radio"
+            value=" Mayor A"
+          />
 
           <h1 className="label">Mayor B</h1>
 
-          <input {...register("categoriaOperacion")} type="radio" value=" Mayor B" />
+          <input
+            {...register("categoriaOperacion")}
+            type="radio"
+            value=" Mayor B"
+          />
 
           <h1 className="label">Mayor C</h1>
 
-          <input {...register("categoriaOperacion")} type="radio" value=" Mayor C" />
+          <input
+            {...register("categoriaOperacion")}
+            type="radio"
+            value=" Mayor C"
+          />
 
           <h1 className="label">Gran Cirujia</h1>
 
-          <input {...register("categoriaOperacion")} type="radio" value=" Gran Cirujia" />
+          <input
+            {...register("categoriaOperacion")}
+            type="radio"
+            value=" Gran Cirujia"
+          />
         </div>
         <div className="row">
           <h1 className="label">Detalle de operacion</h1>
 
           <textarea {...register("detalleOperacion", {})} />
         </div>
-        <input
-          type="submit"
-          className="button-send"
-          value="Imprimir Historia"
-        />
+        <button type="submit">Imprimir Historia Medica</button>
       </form>
     </>
   );
