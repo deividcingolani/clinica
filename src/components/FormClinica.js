@@ -20,7 +20,7 @@ export default function FormClinica() {
           <input
             type="text"
             placeholder="Paciente"
-            {...register("Paciente", { required: true, maxLength: 80 })}
+            {...register("paciente", { required: true, maxLength: 120 })}
           />
         </div>
         <div className="row">
@@ -29,120 +29,98 @@ export default function FormClinica() {
           <input
             type="text"
             placeholder="Servicio"
-            {...register("Servicio", { required: true, maxLength: 100 })}
+            {...register("servicio", { required: true, maxLength: 100 })}
           />
         </div>
         <div className="row">
           <h1 className="label">Habitacion</h1>
 
           <input
-            type="text"
+            type="number"
             placeholder="Habitacion"
-            {...register("Habitacion", {
-              required: true,
-              pattern: /^\S+@\S+$/i,
-            })}
+            {...register("habitacion")}
           />
         </div>
         <div className="row">
           <h1 className="label">Cama</h1>
 
-          <input
-            type="tel"
-            placeholder="Cama"
-            {...register("Cama", { required: true, maxLength: 12 })}
-          />
+          <input type="number" placeholder="Cama" {...register("Cama")} />
         </div>
         <div className="row">
           <h1 className="label">Cirujano</h1>
           <input
             type="text"
             placeholder="Cirujano"
-            {...register("Cirujano", { required: true })}
+            {...register("cirujano", { required: true })}
           />
-          <h1 className="label">Matricula </h1>
-
+          <h1 className="label second-column">Matricula </h1>
           <input
             type="number"
             placeholder="Matricula Cirujano"
-            {...register("Matricula Cirujano", { required: true })}
+            {...register("matriculaCirujano", { required: true })}
           />
         </div>
         <div className="row">
           <h1 className="label">Ayundante 1</h1>
           <input
             type="text"
-            placeholder="Cirujano"
-            {...register("Cirujano", { required: true })}
+            placeholder="Ayundante 1"
+            {...register("ayundate1", { required: true })}
           />
-          <h1 className="label">Matricula </h1>
+          <h1 className="label second-column">Matricula </h1>
 
           <input
             type="number"
-            placeholder="Matricula Cirujano"
-            {...register("Matricula Cirujano", { required: true })}
+            placeholder="Matricula Ayudante 1"
+            {...register("matriculaAyudante1", { required: true })}
           />
         </div>
         <div className="row">
           <h1 className="label">Ayundante 2</h1>
           <input
             type="text"
-            placeholder="Cirujano"
-            {...register("Cirujano", { required: true })}
+            placeholder="Ayundante 2"
+            {...register("ayudante2", { required: true })}
           />
-          <h1 className="label">Matricula </h1>
+          <h1 className="label second-column">Matricula </h1>
 
           <input
             type="number"
-            placeholder="Matricula Cirujano"
-            {...register("Matricula Cirujano", { required: true })}
+            placeholder="Matricula Ayundante 2"
+            {...register("matriculaAyudante2", { required: true })}
           />
         </div>
         <div className="row">
           <h1 className="label">Instrumentadora</h1>
           <input
             type="text"
-            placeholder="Cirujano"
-            {...register("Cirujano", { required: true })}
+            placeholder="Instrumentadora"
+            {...register("instrumentadora", { required: true })}
           />
-          <h1 className="label">Matricula</h1>
+          <h1 className="label second-column">Matricula</h1>
 
           <input
             type="number"
-            placeholder="Matricula Cirujano"
-            {...register("Matricula Cirujano", { required: true })}
+            placeholder="Matricula Instrumentadora"
+            {...register("matriculaInstrumentadora", { required: true })}
           />
         </div>
         <div className="row">
-          <h1 className="label">Instrumentadora</h1>
+          <h1 className="label">Anestesista</h1>
           <input
             type="text"
-            placeholder="Cirujano"
-            {...register("Cirujano", { required: true })}
+            placeholder="Anestesista"
+            {...register("anestesista", { required: true })}
           />
-          <h1 className="label">Matricula</h1>
+          <h1 className="label second-column">Matricula</h1>
 
           <input
             type="number"
-            placeholder="Matricula Cirujano"
-            {...register("Matricula Cirujano", { required: true })}
+            placeholder="Matricula Anestesista"
+            {...register("matriculaAnestesista", { required: true })}
           />
         </div>
-        <div className="row">
-          <h1 className="label">Instrumentadora</h1>
-          <input
-            type="text"
-            placeholder="Cirujano"
-            {...register("Cirujano", { required: true })}
-          />
-          <h1 className="label">Matricula</h1>
 
-          <input
-            type="number"
-            placeholder="Matricula Cirujano"
-            {...register("Matricula Cirujano", { required: true })}
-          />
-        </div>
         <div className="row">
           <h1 className="label">Anestesia Empleada</h1>
 
@@ -158,23 +136,26 @@ export default function FormClinica() {
           <input
             type="text"
             placeholder="Diagnostico Operatorio"
-            {...register("Diagnostico Operatorio", {})}
+            {...register("diagnosticoOperatorio", {})}
           />
         </div>
+
         <div className="row">
+          <h1 className="label">Riesgo Operatorio</h1>
+
           <h1 className="label">Grave</h1>
 
-          <input {...register} type="radio" value="Grave" />
-        </div>
-        <div className="row">
+          <input {...register("riesgoOperatorio")} type="radio" value="Grave" />
           <h1 className="label">Mediano</h1>
 
-          <input {...register} type="radio" value="Mediano" />
-        </div>
-        <div className="row">
+          <input
+            {...register("riesgoOperatorio")}
+            type="radio"
+            value="Mediano"
+          />
           <h1 className="label">Leve</h1>
 
-          <input {...register} type="radio" value="Leve" />
+          <input {...register("riesgoOperatorio")} type="radio" value="Leve" />
         </div>
         <div className="row">
           <h1 className="label">Operacion Practicada</h1>
@@ -182,48 +163,46 @@ export default function FormClinica() {
           <input
             type="text"
             placeholder="Operacion Practicada"
-            {...register("Operacion Practicada", {})}
+            {...register("operacionPracticada", {})}
+          />
+        </div>
+        <div className="row">
+          <h1 className="label">Codigo</h1>
+
+          <input
+            type="number"
+            placeholder="Codigo"
+            {...register("codigo", {})}
           />
         </div>
         <div className="row">
           <h1 className="label">Cirugia</h1>
-
-          <input {...register} type="radio" value="Cirugia" />
-        </div>
-        <div className="row">
           <h1 className="label">Media</h1>
-
-          <input {...register} type="radio" value=" Media" />
-        </div>
-        <div className="row">
+          <input {...register("categoriaOperacion")} type="radio" value=" Media" />
           <h1 className="label">Intermedia</h1>
 
-          <input {...register} type="radio" value=" Intermedia" />
-        </div>
-        <div className="row">
+          <input {...register("categoriaOperacion")} type="radio" value=" Intermedia" />
+
           <h1 className="label">Mayor A</h1>
 
-          <input {...register} type="radio" value=" Mayor A" />
-        </div>
-        <div className="row">
+          <input {...register("categoriaOperacion")} type="radio" value=" Mayor A" />
+
           <h1 className="label">Mayor B</h1>
 
-          <input {...register} type="radio" value=" Mayor B" />
-        </div>
-        <div className="row">
+          <input {...register("categoriaOperacion")} type="radio" value=" Mayor B" />
+
           <h1 className="label">Mayor C</h1>
 
-          <input {...register} type="radio" value=" Mayor C" />
-        </div>
-        <div className="row">
+          <input {...register("categoriaOperacion")} type="radio" value=" Mayor C" />
+
           <h1 className="label">Gran Cirujia</h1>
 
-          <input {...register} type="radio" value=" Gran Cirujia" />
+          <input {...register("categoriaOperacion")} type="radio" value=" Gran Cirujia" />
         </div>
         <div className="row">
           <h1 className="label">Detalle de operacion</h1>
 
-          <textarea {...register("Detalle de operacion", {})} />
+          <textarea {...register("detalleOperacion", {})} />
         </div>
         <input
           type="submit"
