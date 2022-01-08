@@ -1,5 +1,5 @@
 import "./App.css";
-import FormClinica from "./FormClinica";
+import FormClinica from "./components/FormClinica";
 
 function App() {
   return (

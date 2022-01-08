@@ -1,0 +1,13 @@
+.row{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+.label{
+    font-size: 10px;
+}
