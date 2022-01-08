@@ -1,20 +1,31 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import "./formClinica.css";
+import { useNavigate } from 'react-router-dom';
 
 export default function FormClinica() {
-  const {
+  const navigate = useNavigate();
+    const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = (data) => navigate("/document",{state:data});
   console.log("Errores", errors);
-
+  const date=new Date()
   return (
     <>
       <h1>Sanatorio Medico Los Tilos </h1>
       <form onSubmit={handleSubmit(onSubmit)}>
+      <div className="row">
+          <h1 className="label">Fecha de Cirugia</h1>
+          <input
+            type="date"
+            defaultValue={date}
+            placeholder="Fecha de cirugia"
+            {...register("fechaCirugia", { required: true, maxLength: 120 })}
+          />
+        </div>
         <div className="row">
           <h1 className="label">Paciente</h1>
           <input
@@ -44,7 +55,7 @@ export default function FormClinica() {
         <div className="row">
           <h1 className="label">Cama</h1>
 
-          <input type="number" placeholder="Cama" {...register("Cama")} />
+          <input type="number" placeholder="Cama" {...register("cama")} />
         </div>
         <div className="row">
           <h1 className="label">Cirujano</h1>
