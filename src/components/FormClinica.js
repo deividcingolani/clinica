@@ -5,19 +5,19 @@ import { useNavigate } from 'react-router-dom';
 
 export default function FormClinica() {
   const navigate = useNavigate();
-    const {
+  const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
-  const onSubmit = (data) => navigate("/document",{state:data});
+  const onSubmit = (data) => navigate("/document", { state: data });
   console.log("Errores", errors);
-  const date=new Date()
+  const date = new Date()
   return (
     <>
       <h1>Sanatorio Medico Los Tilos </h1>
       <form onSubmit={handleSubmit(onSubmit)}>
-      <div className="row">
+        <div className="row">
           <h1 className="label">Fecha de Cirugia</h1>
           <input
             type="date"
@@ -62,13 +62,13 @@ export default function FormClinica() {
           <input
             type="text"
             placeholder="Cirujano"
-            {...register("cirujano", { required: true })}
+            {...register("cirujano")}
           />
           <h1 className="label second-column">Matricula </h1>
           <input
             type="number"
             placeholder="Matricula Cirujano"
-            {...register("matriculaCirujano", { required: true })}
+            {...register("matriculaCirujano")}
           />
         </div>
         <div className="row">
@@ -76,14 +76,14 @@ export default function FormClinica() {
           <input
             type="text"
             placeholder="Ayundante 1"
-            {...register("ayundate1", { required: true })}
+            {...register("ayundate1")}
           />
           <h1 className="label second-column">Matricula </h1>
 
           <input
             type="number"
             placeholder="Matricula Ayudante 1"
-            {...register("matriculaAyudante1", { required: true })}
+            {...register("matriculaAyudante1")}
           />
         </div>
         <div className="row">
@@ -91,14 +91,14 @@ export default function FormClinica() {
           <input
             type="text"
             placeholder="Ayundante 2"
-            {...register("ayudante2", { required: true })}
+            {...register("ayudante2")}
           />
           <h1 className="label second-column">Matricula </h1>
 
           <input
             type="number"
             placeholder="Matricula Ayundante 2"
-            {...register("matriculaAyudante2", { required: true })}
+            {...register("matriculaAyudante2")}
           />
         </div>
         <div className="row">
@@ -106,14 +106,14 @@ export default function FormClinica() {
           <input
             type="text"
             placeholder="Instrumentadora"
-            {...register("instrumentadora", { required: true })}
+            {...register("instrumentadora")}
           />
           <h1 className="label second-column">Matricula</h1>
 
           <input
             type="number"
             placeholder="Matricula Instrumentadora"
-            {...register("matriculaInstrumentadora", { required: true })}
+            {...register("matriculaInstrumentadora")}
           />
         </div>
         <div className="row">
@@ -121,14 +121,14 @@ export default function FormClinica() {
           <input
             type="text"
             placeholder="Anestesista"
-            {...register("anestesista", { required: true })}
+            {...register("anestesista")}
           />
           <h1 className="label second-column">Matricula</h1>
 
           <input
             type="number"
             placeholder="Matricula Anestesista"
-            {...register("matriculaAnestesista", { required: true })}
+            {...register("matriculaAnestesista")}
           />
         </div>
 
@@ -154,19 +154,19 @@ export default function FormClinica() {
         <div className="row">
           <h1 className="label">Riesgo Operatorio</h1>
 
-          <h1 className="label">Grave</h1>
-
           <input {...register("riesgoOperatorio")} type="radio" value="Grave" />
-          <h1 className="label">Mediano</h1>
+          <h1 className="label">Grave</h1>
 
           <input
             {...register("riesgoOperatorio")}
             type="radio"
             value="Mediano"
           />
-          <h1 className="label">Leve</h1>
+          <h1 className="label">Mediano</h1>
 
           <input {...register("riesgoOperatorio")} type="radio" value="Leve" />
+          <h1 className="label">Leve</h1>
+
         </div>
         <div className="row">
           <h1 className="label">Operacion Practicada</h1>
@@ -188,51 +188,51 @@ export default function FormClinica() {
         </div>
         <div className="row">
           <h1 className="label">Cirugia</h1>
+          <input
+            {...register("categoriaOperacion")}
+            type="radio"
+            value="Media"
+          />
           <h1 className="label">Media</h1>
           <input
             {...register("categoriaOperacion")}
             type="radio"
-            value=" Media"
+            value="Intermedia"
           />
           <h1 className="label">Intermedia</h1>
 
+
           <input
             {...register("categoriaOperacion")}
             type="radio"
-            value=" Intermedia"
+            value="Mayor A"
           />
-
           <h1 className="label">Mayor A</h1>
 
+
           <input
             {...register("categoriaOperacion")}
             type="radio"
-            value=" Mayor A"
+            value="Mayor B"
           />
-
           <h1 className="label">Mayor B</h1>
 
+
           <input
             {...register("categoriaOperacion")}
             type="radio"
-            value=" Mayor B"
+            value="Mayor C"
           />
-
           <h1 className="label">Mayor C</h1>
 
+
           <input
             {...register("categoriaOperacion")}
             type="radio"
-            value=" Mayor C"
+            value="Gran Cirujía"
           />
-
           <h1 className="label">Gran Cirujia</h1>
 
-          <input
-            {...register("categoriaOperacion")}
-            type="radio"
-            value=" Gran Cirujia"
-          />
         </div>
         <div className="row">
           <h1 className="label">Detalle de operacion</h1>

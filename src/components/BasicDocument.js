@@ -5,9 +5,11 @@ import {
   View,
   StyleSheet,
   PDFViewer,
+  Image,
 } from "@react-pdf/renderer";
 import { useLocation } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import Logo from '../logo.png'
 
 // Create styles
 const styles = StyleSheet.create({
@@ -16,10 +18,59 @@ const styles = StyleSheet.create({
     height: window.innerHeight,
   },
   page: {},
-  section: {
-    margin: 1,
-    padding: 1,
+  headerContainer: {
+    marginRight: 20,
+    marginLeft: 30,
+    marginTop: 40,
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center'
   },
+  logo: {
+    width: 200
+  },
+  textContainer: {
+    marginTop: 20,
+    display: 'flex',
+    justifyContent: 'space-between',
+    flexDirection: 'row'
+  },
+  text: {
+    fontSize: 11,
+    fontWeight: 'normal',
+  },
+  surgeryDateContainer: {
+    marginLeft: 100,
+    marginTop: 20,
+    marginBottom: 10
+  },
+  formContianer: {
+    marginLeft: 40,
+    marginRight: 10
+  },
+  patientInformationContainer: {
+    border: 1,
+    padding: 10,
+  },
+  surgeryInformationContainer: {
+    borderLeft: 1,
+    marginTop: 10,
+    paddingLeft: 10,
+    paddingBottom: 10,
+    paddingRight: 20
+  },
+  operationCategoryContainer: {
+    alignItems: 'flex-end'
+  },
+  firmContainer: {
+    marginTop: 100,
+    alignSelf: 'flex-end',
+    borderTop: 1,
+    width: 150,
+    paddingTop: 5,
+    alignItems: 'center',
+  }
 });
 
 // {
@@ -86,81 +137,125 @@ function BasicDocument() {
             <Document>
               {/*render a single page*/}
               <Page size="A4" style={styles.page}>
-              <View style={styles.section}>
-                  <Text> Fecha de cirugia: {fechaCirugia}</Text>
+                <View style={styles.headerContainer}>
+                  <Image style={styles.logo} src={Logo} />
+                  <Text>HOJA QUIRURGICA</Text>
                 </View>
-                <View style={styles.section}>
-                  <Text> Paciente: {paciente}</Text>
+                <View style={styles.surgeryDateContainer}>
+                  <Text style={styles.text} > Fecha de cirugia: {fechaCirugia}</Text>
                 </View>
-                <View style={styles.section}>
-                  <Text>
-                    Servicio: {servicio} Habitacion: {habitacion}     cama: {cama}
-                  </Text>
-                </View>
-                <View style={styles.section}>
-                  <Text>
-                    Cirujano: {cirujano} Matricula: {matriculaCirujano}
-                  </Text>
-                </View>
-                <View style={styles.section}>
-                  <Text>
-                    Ayudante 1: {ayundate1} Matricula: {matriculaAyudante1}
-                  </Text>
-                </View>
-                <View style={styles.section}>
-                  <Text>
-                    Ayudante 2: {ayudante2} Matricula: {matriculaAyudante2}
-                  </Text>
-                </View>
-                <View style={styles.section}>
-                  <Text>
-                    Instrumentadora: {instrumentadora} Matricula: {matriculaInstrumentadora}
-                  </Text>
-                </View>
-                <View style={styles.section}>
-                  <Text>
-                  Anestesista: {anestesista} Matricula: {matriculaAnestesista}
-                  </Text>
-                </View>
-                <View style={styles.section}>
-                  <Text>
-                  Anestesia Empleada: {anestesiaEmpleada}
-                  </Text>
-                </View>
-                <View style={styles.section}>
-                  <Text>
-                  Anestesia Empleada: {anestesiaEmpleada}
-                  </Text>
-                </View>
-                <View style={styles.section}>
-                  <Text>
-                  Diagnostico Operatorio: {diagnosticoOperatorio}
-                  </Text>
-                </View>
-                <View style={styles.section}>
-                  <Text>
-                  Riesgo Operatorio: {riesgoOperatorio}
-                  </Text>
-                </View>
-                <View style={styles.section}>
-                  <Text>
-                  Operacion Practicada: {operacionPracticada}
-                  </Text>
-                </View>
-                <View style={styles.section}>
-                  <Text>
-                  Codigo: {codigo}
-                  </Text>
-                </View>
-                <View style={styles.section}>
-                  <Text>
-                  Categoria de la operacion: {categoriaOperacion}
-                  </Text>
-                </View>
-                <View style={styles.section}>
-                  <Text>
-                  Detalle de operacion: {detalleOperacion}
-                  </Text>
+                <View style={styles.formContianer}>
+                  <View style={styles.patientInformationContainer}>
+                    <Text style={styles.text}> Paciente: {paciente}</Text>
+                    <View style={styles.textContainer}>
+                      <Text style={styles.text}>
+                        Servicio: {servicio}                                           Habitacion: {habitacion}                                          cama: {cama}
+                      </Text>
+                    </View>
+                  </View>
+                  <View style={styles.surgeryInformationContainer}>
+                    <View style={styles.textContainer}>
+                      <Text style={styles.text}>
+                        Cirujano: {cirujano}
+                      </Text>
+                      <Text style={styles.text}>
+                        Matricula: {matriculaCirujano}
+                      </Text>
+                    </View>
+                    <View style={styles.textContainer}>
+                      <Text style={styles.text}>
+                        Ayudante 1: {ayundate1}
+                      </Text>
+                      <Text style={styles.text}>
+                        Matricula: {matriculaAyudante1}
+                      </Text>
+                    </View >
+                    <View style={styles.textContainer}>
+                      <Text style={styles.text}>
+                        Ayudante 2: {ayudante2}
+                      </Text>
+                      <Text style={styles.text}>
+                        Matricula: {matriculaAyudante2}
+                      </Text>
+                    </View>
+                    <View style={styles.textContainer}>
+                      <Text style={styles.text}>
+                        Instrumentadora: {instrumentadora}
+                      </Text>
+                      <Text style={styles.text}>
+                        Matricula: {matriculaInstrumentadora}
+                      </Text>
+                    </View>
+                    <View style={styles.textContainer}>
+                      <Text style={styles.text}>
+                        Anestesista: {anestesista}
+                      </Text>
+                      <Text style={styles.text}>
+                        Matricula: {matriculaAnestesista}
+                      </Text>
+                    </View>
+                    <View style={styles.textContainer}>
+                      <Text style={styles.text}>
+                        Anestesia Empleada: {anestesiaEmpleada}
+                      </Text>
+                    </View>
+                    <View style={styles.textContainer}>
+                      <Text style={styles.text}>
+                        Diagnostico Operatorio: {diagnosticoOperatorio}
+                      </Text>
+                    </View>
+                    <View style={styles.textContainer}>
+                      <Text style={styles.text}>
+                        Riesgo Operatorio:
+                      </Text>
+                      <View>
+                        <Text style={styles.text}>
+                          Grave: ( {riesgoOperatorio === 'Grave' && 'x'} )
+                        </Text>
+                        <Text style={styles.text}>
+                          Mediano: ( {riesgoOperatorio === 'Mediano' && 'x'} )
+                        </Text>
+                        <Text style={styles.text}>
+                          Leve: ( {riesgoOperatorio === 'Leve' && 'x'} )
+                        </Text>
+                      </View>
+                    </View>
+                    <View style={styles.textContainer}>
+                      <Text style={styles.text}>
+                        Operacion Practicada:
+                      </Text>
+                    </View>
+                    <View style={styles.textContainer}>
+                      <Text style={styles.text}>
+                        Codigo: {codigo}
+                      </Text>
+                    </View>
+                    <View style={styles.textContainer}>
+                      <Text style={styles.text}>
+                        Categoria de la operacion: {categoriaOperacion}
+                      </Text>
+                      <View style={styles.operationCategoryContainer}>
+                        <Text style={styles.text}>
+                          Cirugia:  Menor: ( {categoriaOperacion === 'Menor' && 'x'} ) Media: ( {categoriaOperacion === 'Media' && 'x'} ) Intermedia: ( {categoriaOperacion === 'Intermedia' && 'x'} )
+                        </Text>
+                        <Text style={styles.text}>
+                          Mayor A: ( {categoriaOperacion === 'Mayor A' && 'x'} ) Mayor B: ( {categoriaOperacion === 'Mayor B' && 'x'} ) Mayor C: ( {categoriaOperacion === 'Mayor C' && 'x'} )
+                        </Text>
+                        <Text style={styles.text}>
+                          Gran Cirugía: ( {categoriaOperacion === 'Gran Cirugía' && 'x'} )
+                        </Text>
+                      </View>
+                    </View>
+                    <View style={styles.textContainer}>
+                      <Text style={styles.text}>
+                        Detalle de operacion: {detalleOperacion}
+                      </Text>
+                    </View>
+                    <View style={styles.firmContainer}>
+                      <Text style={styles.text}>Firma y sello</Text>
+                      <Text style={styles.text}>Profesional</Text>
+                    </View>
+                  </View>
                 </View>
               </Page>
             </Document>
