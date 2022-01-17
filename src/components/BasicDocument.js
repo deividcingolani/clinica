@@ -120,7 +120,6 @@ function BasicDocument() {
     anestesiaEmpleada,
     diagnosticoOperatorio,
     riesgoOperatorio,
-    operacionPracticada,
     codigo,
     categoriaOperacion,
     detalleOperacion,

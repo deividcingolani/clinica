@@ -17,7 +17,7 @@ export default function FormClinica() {
     <>
       <h1>Sanatorio Medico Los Tilos </h1>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <div className="row">
+        <div className="inputContainer">
           <h1 className="label">Fecha de Cirugia</h1>
           <input
             type="date"
@@ -26,7 +26,7 @@ export default function FormClinica() {
             {...register("fechaCirugia", { required: true, maxLength: 120 })}
           />
         </div>
-        <div className="row">
+        <div className="inputContainer">
           <h1 className="label">Paciente</h1>
           <input
             type="text"
@@ -34,7 +34,7 @@ export default function FormClinica() {
             {...register("paciente", { required: true, maxLength: 120 })}
           />
         </div>
-        <div className="row">
+        <div className="inputContainer">
           <h1 className="label">Servicio</h1>
 
           <input
@@ -43,7 +43,7 @@ export default function FormClinica() {
             {...register("servicio", { required: true, maxLength: 100 })}
           />
         </div>
-        <div className="row">
+        <div className="inputContainer">
           <h1 className="label">Habitacion</h1>
 
           <input
@@ -52,87 +52,111 @@ export default function FormClinica() {
             {...register("habitacion")}
           />
         </div>
-        <div className="row">
+        <div className="inputContainer">
           <h1 className="label">Cama</h1>
 
           <input type="number" placeholder="Cama" {...register("cama")} />
         </div>
-        <div className="row">
-          <h1 className="label">Cirujano</h1>
-          <input
-            type="text"
-            placeholder="Cirujano"
-            {...register("cirujano")}
-          />
-          <h1 className="label second-column">Matricula </h1>
-          <input
-            type="number"
-            placeholder="Matricula Cirujano"
-            {...register("matriculaCirujano")}
-          />
-        </div>
-        <div className="row">
-          <h1 className="label">Ayundante 1</h1>
-          <input
-            type="text"
-            placeholder="Ayundante 1"
-            {...register("ayundate1")}
-          />
-          <h1 className="label second-column">Matricula </h1>
 
-          <input
-            type="number"
-            placeholder="Matricula Ayudante 1"
-            {...register("matriculaAyudante1")}
-          />
-        </div>
-        <div className="row">
-          <h1 className="label">Ayundante 2</h1>
-          <input
-            type="text"
-            placeholder="Ayundante 2"
-            {...register("ayudante2")}
-          />
-          <h1 className="label second-column">Matricula </h1>
-
-          <input
-            type="number"
-            placeholder="Matricula Ayundante 2"
-            {...register("matriculaAyudante2")}
-          />
-        </div>
-        <div className="row">
-          <h1 className="label">Instrumentadora</h1>
-          <input
-            type="text"
-            placeholder="Instrumentadora"
-            {...register("instrumentadora")}
-          />
-          <h1 className="label second-column">Matricula</h1>
-
-          <input
-            type="number"
-            placeholder="Matricula Instrumentadora"
-            {...register("matriculaInstrumentadora")}
-          />
-        </div>
-        <div className="row">
-          <h1 className="label">Anestesista</h1>
-          <input
-            type="text"
-            placeholder="Anestesista"
-            {...register("anestesista")}
-          />
-          <h1 className="label second-column">Matricula</h1>
-
-          <input
-            type="number"
-            placeholder="Matricula Anestesista"
-            {...register("matriculaAnestesista")}
-          />
+        <div className="personalInputContainer">
+          <div className="inputContainer" >
+            <h1 className="label">Cirujano</h1>
+            <input
+              type="text"
+              placeholder="Cirujano"
+              {...register("cirujano")}
+            />
+          </div>
+          <div className="inputContainer" >
+            <h1 className="label second-column">Matricula </h1>
+            <input
+              type="number"
+              placeholder="Matricula Cirujano"
+              {...register("matriculaCirujano")}
+            />
+          </div>
         </div>
 
-        <div className="row">
+        <div className="personalInputContainer">
+          <div className="inputContainer">
+            <h1 className="label">Ayundante 1</h1>
+            <input
+              type="text"
+              placeholder="Ayundante 1"
+              {...register("ayundate1")}
+            />
+          </div>
+
+          <div  className="inputContainer">
+            <h1 className="label second-column">Matricula </h1>
+            <input
+              type="number"
+              placeholder="Matricula Ayudante 1"
+              {...register("matriculaAyudante1")}
+            />
+          </div>
+        </div>
+
+        <div className="personalInputContainer">
+          <div className="inputContainer">
+            <h1 className="label">Ayundante 2</h1>
+            <input
+              type="text"
+              placeholder="Ayundante 2"
+              {...register("ayudante2")}
+            />
+          </div>
+
+          <div className="inputContainer">
+            <h1 className="label second-column">Matricula </h1>
+            <input
+              type="number"
+              placeholder="Matricula Ayundante 2"
+              {...register("matriculaAyudante2")}
+            />
+          </div>
+        </div>
+
+        <div className="personalInputContainer">
+          <div className="inputContainer">
+            <h1 className="label">Instrumentadora</h1>
+            <input
+              type="text"
+              placeholder="Instrumentadora"
+              {...register("instrumentadora")}
+            />
+          </div>
+
+          <div className="inputContainer">
+            <h1 className="label second-column">Matricula</h1>
+            <input
+              type="number"
+              placeholder="Matricula Instrumentadora"
+              {...register("matriculaInstrumentadora")}
+            />
+          </div>
+        </div>
+
+        <div className="personalInputContainer">
+          <div className="inputContainer">
+            <h1 className="label">Anestesista</h1>
+            <input
+              type="text"
+              placeholder="Anestesista"
+              {...register("anestesista")}
+            />
+          </div>
+          <div className="inputContainer">
+            <h1 className="label second-column">Matricula</h1>
+            <input
+              type="number"
+              placeholder="Matricula Anestesista"
+              {...register("matriculaAnestesista")}
+            />
+          </div>
+        </div>
+
+        <div className="inputContainer">
           <h1 className="label">Anestesia Empleada</h1>
 
           <input
@@ -141,7 +165,7 @@ export default function FormClinica() {
             {...register("anestesiaEmpleada", {})}
           />
         </div>
-        <div className="row">
+        <div className="inputContainer">
           <h1 className="label">Diagnostico Operatorio</h1>
 
           <input
@@ -151,24 +175,30 @@ export default function FormClinica() {
           />
         </div>
 
-        <div className="row">
+        <div className="inputContainer">
           <h1 className="label">Riesgo Operatorio</h1>
 
-          <input {...register("riesgoOperatorio")} type="radio" value="Grave" />
-          <h1 className="label">Grave</h1>
+          <div className="row">
+            <input {...register("riesgoOperatorio")} type="radio" value="Grave" />
+            <h1 className="label">Grave</h1>
+          </div>
 
-          <input
-            {...register("riesgoOperatorio")}
-            type="radio"
-            value="Mediano"
-          />
-          <h1 className="label">Mediano</h1>
+          <div className="row">
+            <input
+              {...register("riesgoOperatorio")}
+              type="radio"
+              value="Mediano"
+            />
+            <h1 className="label">Mediano</h1>
+          </div>
 
-          <input {...register("riesgoOperatorio")} type="radio" value="Leve" />
-          <h1 className="label">Leve</h1>
+          <div className="row">
+            <input {...register("riesgoOperatorio")} type="radio" value="Leve" />
+            <h1 className="label">Leve</h1>
+          </div>
 
         </div>
-        <div className="row">
+        <div className="inputContainer">
           <h1 className="label">Operacion Practicada</h1>
 
           <input
@@ -177,7 +207,7 @@ export default function FormClinica() {
             {...register("operacionPracticada", {})}
           />
         </div>
-        <div className="row">
+        <div className="inputContainer">
           <h1 className="label">Codigo</h1>
 
           <input
@@ -186,55 +216,65 @@ export default function FormClinica() {
             {...register("codigo", {})}
           />
         </div>
-        <div className="row">
+        <div className="inputContainer">
           <h1 className="label">Cirugia</h1>
-          <input
-            {...register("categoriaOperacion")}
-            type="radio"
-            value="Media"
-          />
-          <h1 className="label">Media</h1>
-          <input
-            {...register("categoriaOperacion")}
-            type="radio"
-            value="Intermedia"
-          />
-          <h1 className="label">Intermedia</h1>
 
+          <div className="row">
+            <input
+              {...register("categoriaOperacion")}
+              type="radio"
+              value="Media"
+            />
+            <h1 className="label">Media</h1>
+          </div>
 
-          <input
-            {...register("categoriaOperacion")}
-            type="radio"
-            value="Mayor A"
-          />
-          <h1 className="label">Mayor A</h1>
+          <div className="row">
+            <input
+              {...register("categoriaOperacion")}
+              type="radio"
+              value="Intermedia"
+            />
+            <h1 className="label">Intermedia</h1>
+          </div>
 
+          <div className="row">
+            <input
+              {...register("categoriaOperacion")}
+              type="radio"
+              value="Mayor A"
+            />
+            <h1 className="label">Mayor A</h1>
+          </div>
 
-          <input
-            {...register("categoriaOperacion")}
-            type="radio"
-            value="Mayor B"
-          />
-          <h1 className="label">Mayor B</h1>
+          <div className="row">
+            <input
+              {...register("categoriaOperacion")}
+              type="radio"
+              value="Mayor B"
+            />
+            <h1 className="label">Mayor B</h1>
+          </div>
 
+          <div className="row">
+            <input
+              {...register("categoriaOperacion")}
+              type="radio"
+              value="Mayor C"
+            />
+            <h1 className="label">Mayor C</h1>
+          </div>
 
-          <input
-            {...register("categoriaOperacion")}
-            type="radio"
-            value="Mayor C"
-          />
-          <h1 className="label">Mayor C</h1>
-
-
-          <input
-            {...register("categoriaOperacion")}
-            type="radio"
-            value="Gran Cirujía"
-          />
-          <h1 className="label">Gran Cirujia</h1>
+          <div className="row">
+            <input
+              {...register("categoriaOperacion")}
+              type="radio"
+              value="Gran Cirujía"
+            />
+            <h1 className="label">Gran Cirujia</h1>
+          </div>
 
         </div>
-        <div className="row">
+        <div className="inputContainer">
           <h1 className="label">Detalle de operacion</h1>
 
           <textarea {...register("detalleOperacion", {})} />

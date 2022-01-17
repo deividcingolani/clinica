@@ -1,13 +1,27 @@
-.row {
+.inputContainer {
   display: flex;
   flex-direction: row;
   margin-bottom: 20px;
-  margin-left: 100px;
+}
+
+.personalInputContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.row{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 form {
   display: flex;
   flex-direction: column;
+  width: 650px;
+  margin-left: 100px;
+  margin: auto;
 }
 .label {
   font-size: 10px;
@@ -17,4 +31,40 @@ form {
 
 .second-column{
     margin-left: 20px;
+}
+
+@media (max-width: 753px) {
+  .inputContainer {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: auto;
+  }
+  .personalInputContainer {
+  display: flex;
+  flex-direction: column;
+}
+}
+
+@media (max-width: 425px) {
+  .inputContainer {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 275px;
+    margin: auto;
+  }
 }
